@@ -1,0 +1,68 @@
+/* 元素选择器，也称作标签或类型选择器； p */
+h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+p,
+li {
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+/* ID选择器；#my-id */
+#my-id2 {
+    color: green;
+}
+
+/* 类选择器； .my-class */
+.my-class2 {
+    color: pink;
+}
+
+/* 属性选择器； img[src] */
+img[src] {
+    color: purple;
+}
+
+/* 伪选择器 a:hover */
+a:hover {
+    font-size: large;
+}
+
+.ma-shan-zheng-regular {
+    font-family: "Ma Shan Zheng", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: palevioletred;
+}
+
+.my-font-custom1 {
+    font-size: 20px;
+    font-family: "Ma Shan Zhen", cursive;
+}
+
+html {
+    background-color: #00539f;
+}
+
+body {
+    width: 600px;
+    margin: 0 auto;
+    background-color: #ff9500;
+    padding: 0 20px 20px 20px;
+    border: 5px solid black;
+}
+
+h1 {
+    margin: 0;
+    padding: 20px 0;
+    color: #00539f;
+    text-shadow: 3px 3px 1px black;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
