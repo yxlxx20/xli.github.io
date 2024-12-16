@@ -3,26 +3,158 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>练习&lt;title&gt;element</title>
-    <!-- 基本图标 -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-    <!-- 含有高分辨率 Retina 显示屏的 iPad Pro -->
-    <link rel="apple-touch-icon" sizes="167x167" href="apple-touch-icon-167x167.png"/>
-    <!-- 三倍分辨率的iPhone -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png"/>
-    <!-- 没有 Retina 的iPad、iPad mini等 -->
-    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png"/>
-    <!-- 二倍分辨率的 iPhone 和其他设备 -->
-    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-120x120.png"/>
+    <title>Mozilla splash page</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <style>
+      /* header and body setup */
+
+      html {
+        font-family: 'Open Sans', sans-serif;
+        background: url(pattern.png);
+      }
+
+      body {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: white;
+        position: relative;
+      }
+
+      /* Header styling */
+
+      header {
+        height: 150px;
+      }
+
+      header img {
+        width: 100px;
+        position: absolute;
+        right: 32.5px;
+        top: 32.5px;
+      }
+
+      h1 {
+        font-size: 50px;
+        line-height: 140px;
+        margin: 0 0 0 32.5px;
+      }
+
+      /* main section and video styling */
+
+      main {
+        background: #ccc;
+      }
+
+      article {
+        padding: 20px;
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+
+      p {
+        line-height: 2;
+      }
+
+      iframe {
+        float: left;
+        margin: 0 20px 20px 0;
+        max-width: 100%;
+      }
+
+      /* further info links */
+
+      .further-info {
+        clear: left;
+        padding: 40px 0;
+        background: #c13832;
+        box-shadow: inset 0 3px 2px rgba(0,0,0,0.5),
+                    inset 0 -3px 2px rgba(0,0,0,0.5);
+      }
+
+      .further-info a {
+        width: 25%;
+        display: block;
+        float: left;
+      }
+
+      .further-info img {
+        max-width: 100%;
+      }
+
+      .clearfix {
+        clear: both;
+      }
+
+      /* Red panda image */
+
+      .red-panda img {
+        display: block;
+        max-width: 100%;
+      }
+    </style>
   </head>
   <body>
-    <h1>&lt;h1&gt;element</h1>
-    <p>
-      相思无用，惟别而已。<strong>别期若有定</strong>，千般煎熬又何如？莫道黯然销魂，<a href="https://www.baidu.com" title="点我点我" target="_blank">何处柳暗花明？</a><br>
-      --神雕侠侣
-    </p>
-    <a href="https://www.baidu.com"><img src="https://roy-tian.github.io/learning-area/extras/tools/playable-code/images/sdxl.jfif" alt="tips图片"></a>
-    <p>HTML 中用 &lt;p&gt;来定义段落元素</p>
+    <header>
+      <h1>Mozilla</h1>
+      <!-- insert <img> element, link to the small
+          version of the Firefox logo -->
+      <img src="images/firefox_logo-only_RGB.png" />
+    </header>
+
+    <main>
+      <article>
+        <!-- insert iframe from youtube -->
+        <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=3303261&bvid=BV1rs411d7hC&cid=5221343&p=2" width="400" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
+        <h2>Rocking the free web</h2>
+
+        <p>Mozilla are a global community of technologists, thinkers, and builders, working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.</p>
+
+        <p>Click on the images below to find more information about the cool stuff Mozilla does. <a href="https://www.flickr.com/photos/mathiasappel/21675551065/">Red panda picture</a> by Mathias Appel.</p>
+      </article>
+
+      <div class="further-info">
+        <!-- insert images with srcsets and sizes -->
+        <a href="https://www.mozilla.org/en-US/firefox/new/">
+          <img 
+          srcset="images/firefox_logo-only_RGB_400.png 400w, images/firefox_logo-only_RGB_120.png 120w"
+          sizes="(max-width: 500px) 120px, 400px"
+          src="images/firefox_logo-only_RGB.png"
+          alt="一个logo图片" />
+        </a>
+        <a href="https://www.mozilla.org/">
+          <img 
+          srcset="images/mozilla-dinosaur-head_400.png 400w, images/mozilla-dinosaur-head_120.png 120w"
+          sizes="(max-width: 500px) 120px, 400px"
+          src="images/mozilla-dinosaur-head.png"
+          alt="一个恐龙图片" />
+        </a>
+        <a href="https://addons.mozilla.org/">
+          <img
+          srcset="images/firefox-addons_400.jpg 400w, images/firefox-addons_120.jpg 120w"
+          sizes="(max-width: 500px) 120px, 400px"
+          src="images/firefox-addons.jpg"
+          alt="一个拼图"
+          />
+        </a>
+        <a href="https://developer.mozilla.org/en-US/">
+          <img src="images/mdn.svg" alt="一个折叠图片">
+        </a>
+        <div class="clearfix"></div>
+      </div>
+
+      <div class="red-panda">
+        <!-- insert picture element -->
+         <picture>
+          <source media="max-width: 599px" srcset="images/red-panda_600.jpg /">
+          <source media="min-width: 600px" srcset="images/red-panda_1200.jpg /">
+          <img src="images/red-panda.jpg" alt="小熊猫图片"/>
+         </picture>
+      </div>
+
+    </main>
   </body>
-  
 </html>
